@@ -30,7 +30,7 @@ public class Register extends HttpServlet {
             throws ServletException, IOException {
         
         String url =req.getServletPath();
-        if(url.equalsIgnoreCase("registerA")){
+        if(url.equalsIgnoreCase("registerM")){
             
             String User = req.getParameter("user");
             String Pass= req.getParameter("pass");
@@ -41,7 +41,7 @@ public class Register extends HttpServlet {
             String Telefono= req.getParameter("telefono");
             Usuario usuario=facade.addMedico(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
             
-        }else if(url.equalsIgnoreCase("registerM")){
+        }else if(url.equalsIgnoreCase("registerP")){
             String User = req.getParameter("user");
             String Pass= req.getParameter("pass");
             String Cedula= req.getParameter("cedula");
@@ -51,7 +51,7 @@ public class Register extends HttpServlet {
             String Telefono= req.getParameter("telefono");
             Usuario usuario=facade.addPaciente(User, Pass, Cedula, Nombres, Fecha, Direccion, Telefono);
             
-        }else if(url.equalsIgnoreCase("registerP")){
+        }else if(url.equalsIgnoreCase("registerA")){
             String User = req.getParameter("user");
             String Pass= req.getParameter("pass");
             String Cedula= req.getParameter("cedula");

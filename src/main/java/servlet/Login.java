@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
                 rd.forward(req, resp);
             } else if (usuario.getTipouser().equals("Medico")) {
                 req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/newhtml.html");
+                rd = req.getRequestDispatcher("/homeMedico.html");
                 rd.forward(req, resp);
 
             } else if (usuario.getTipouser().equals("Paciente")) {
