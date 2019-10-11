@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 
 @WebServlet(
-        name = "MyServlet",
-        urlPatterns = {"/hello"}
+        name = "Login",
+        urlPatterns = {"/login"}
 )
 
 public class Login extends HttpServlet {
