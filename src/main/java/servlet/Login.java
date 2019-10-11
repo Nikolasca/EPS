@@ -28,8 +28,8 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        String user = req.getParameter("usuario");
-        String pass = req.getParameter("password");
+        String user = req.getParameter("user");
+        String pass = req.getParameter("pass");
         Usuario usuario = facade.login(user, pass);
         if (usuario != null) {
             if (usuario.getTipouser().equals("Administrador")) {
