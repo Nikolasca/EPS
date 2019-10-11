@@ -66,6 +66,7 @@
                             <div class="row">
                                 <div class="col-lg-12 text-center" >
                                     <h1 class="mt-5">sopotamadre</h1>
+                                    <p> value="${medico.nombres}"</p>  
                                 </div>
                                 <div class="col-lg-12 text-center">
                                     <c:forEach items="${lista}" var="medico" varStatus="status">
