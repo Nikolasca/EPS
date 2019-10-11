@@ -36,7 +36,7 @@ public class Paciente extends HttpServlet {
             String hora = req.getParameter("hora");
             ArrayList<Medico> lista = facade.Traer(fecha, hora);
             req.setAttribute("lista", lista);
-            rd = req.getRequestDispatcher("/PedirCita2.html");
+            rd = req.getRequestDispatcher("/PedirCita2.jsp");
             rd.forward(req, resp);
         }
 
