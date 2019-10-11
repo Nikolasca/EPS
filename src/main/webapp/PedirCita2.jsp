@@ -78,6 +78,7 @@
                                         <form action="reservar" method="post"
                                               <input type="hidden" name="reserva" value="${medico}">
                                             <input type="hidden" name="paciente" value="${paciente}">
+                                            <button type="submit">Agendar</button>
                                         
                                         </form>
                                     </c:forEach>
