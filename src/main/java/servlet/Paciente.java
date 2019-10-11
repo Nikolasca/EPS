@@ -80,6 +80,13 @@ public class Paciente extends HttpServlet {
            Usuario user = facade.getUsuarios().get(login);
             contrato.getBeneficiarios().add(bene);
             
+            ServletOutputStream out = resp.getOutputStream();
+        out.write("Cita Agregada".getBytes());
+                out.write(login.getBytes());
+                out.write(id.getBytes());
+        out.flush();
+        out.close();
+            
         
         }
         
