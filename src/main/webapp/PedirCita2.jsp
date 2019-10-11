@@ -75,6 +75,7 @@
                                             <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
                                         <br>
+                                        <div>
                                         <form action="reservar" method="get"
                                             <input type="" name="paciente" value="${paciente}">
                                             <input type="" name="reserva" value="${medico.nombres}">
@@ -82,6 +83,7 @@
                                             <input type="" name="hora " value="${hora}">
                                             <button type="submit">Agendar</button>
                                         </form>
+                                        </div>
                                     </c:forEach>
                                     
                                 </div>
