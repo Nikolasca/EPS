@@ -37,7 +37,7 @@ public class Paciente extends HttpServlet {
             req.setAttribute("lista", lista);
             req.setAttribute("fecha", fecha);
             req.setAttribute("hora", hora);
-            rd = req.getRequestDispatcher("/PedirCita2.jsp");
+            rd = req.getRequestDispatcher("/PedirCita.jsp");
             rd.forward(req, resp);
         }else if(url.equalsIgnoreCase("/reservar")){
             String fecha = req.getParameter("fecha");
