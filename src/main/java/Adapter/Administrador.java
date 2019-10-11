@@ -10,17 +10,69 @@ public class Administrador {
     private String tipousuario;
     private String usuario;
     private String contrasena;
-    public Administrador(String usuario, String password) {
-        this.tipousuario = "Administrador";
+    private String Cedula;
+    private String Nombres;
+    private String Fecha;
+    private String Direccion;
+    private String Telefono;
+
+    public Administrador(String usuario, String contrasena, String Cedula, String Nombres, String Fecha, String Direccion, String Telefono) {
         this.usuario = usuario;
-        this.contrasena = password;
+        this.contrasena = contrasena;
+        this.Cedula = Cedula;
+        this.Nombres = Nombres;
+        this.Fecha = Fecha;
+        this.Direccion = Direccion;
+        this.Telefono = Telefono;
+        this.tipousuario = "Administrador";
     }
+    
     public boolean Ingresar(String usuario, String contrasena) {
         return (usuario.equals(this.getUsuario()) && contrasena.equals(this.getContrasena()));
     }
 
     public String obtenerUsuario() {
         return usuario;
+    }
+
+    public String getCedula() {
+        return Cedula;
+    }
+
+    public void setCedula(String Cedula) {
+        this.Cedula = Cedula;
+    }
+
+    public String getNombres() {
+        return Nombres;
+    }
+
+    public void setNombres(String Nombres) {
+        this.Nombres = Nombres;
+    }
+
+    public String getFecha() {
+        return Fecha;
+    }
+
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
+    }
+
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
+    }
+
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(String Telefono) {
+        this.Telefono = Telefono;
     }
 
     public String getUsuario() {

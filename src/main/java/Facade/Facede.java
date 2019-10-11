@@ -35,22 +35,22 @@ public class Facede {
         this.usuarios = new HashMap<>();
         this.eps1 = new EPS();
         this.keyMedicos = new ArrayList<>();
-        this.addMedico("nikolas", "123");
-        this.addPaciente("minichip", "123");
-        this.addAdministrador("ballesgod", "123");
+        this.addMedico("nikolas", "123","34567","Nikolas","21","armenia","23456789");
+        this.addPaciente("nikolas", "123","34567","Nikolas","21","armenia","23456789");
+        this.addAdministrador("nikolas", "123","34567","Nikolas","21","armenia","23456789");
+    }
+    public Usuario addMedico(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
+        Usuario u = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
+        return u;
     }
 
-    public void addMedico(String login, String password) {
-        usuarios.put(login, new Medico(login, password));
-        this.keyMedicos.add(login);
+    public Usuario addPaciente(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
+        Usuario p = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
+        return p;
     }
 
-    public void addPaciente(String login, String password) {
-        usuarios.put(login, new Paciente(login, password));
-    }
-
-    public void addAdministrador(String login, String password) {
-        usuarios.put(login, new Adaptador(login, password));
+    public void addAdministrador(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
+        usuarios.put(login, new Adaptador(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
     }
 
     
