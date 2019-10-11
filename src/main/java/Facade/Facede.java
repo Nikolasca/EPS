@@ -45,7 +45,7 @@ public class Facede {
     }
 
     public Usuario addPaciente(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
-        Usuario p = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
+        Usuario p = usuarios.put(login, new Paciente(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
         return p;
     }
 
