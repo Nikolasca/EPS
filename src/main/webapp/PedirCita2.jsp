@@ -49,7 +49,9 @@
                     <div id="formUsuario">
                         <h3>Ingrese la fecha para ver disponibilidad</h3>
                         <form action="Registroe" method="post">
-                            <input type="text" class="campos" name="user" placeholder="Fecha" required="required"
+                            <input type="text" class="campos" name="fecha" placeholder="fecha" value="${fecha}" required="required"
+                                   maxlength="7" />
+                            <input type="text" class="campos" name="hora" placeholder="hora" value="${hora}" required="required"
                                    maxlength="7" />
                             <br>
                             <br></br><input type="submit" class="btn btn-success" value="Buscar" />
