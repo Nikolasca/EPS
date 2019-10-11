@@ -41,6 +41,8 @@ public class Paciente extends HttpServlet {
             String fecha = req.getParameter("fecha");
             String hora = req.getParameter("hora");
             String reserva = req.getParameter("reserva");
+            String paciente = req.getParameter("paciente");
+            System.out.print(paciente);
             facade.AgregarCita(reserva, fecha, hora, reserva);
         }
 
