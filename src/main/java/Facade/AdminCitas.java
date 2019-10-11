@@ -60,7 +60,7 @@ public class AdminCitas {
                         + this.adminDatos.getPacientes().get(this.nombre).addCita(dataSplit[1], hora, dataSplit[0]);
             } else {
                 return ((this.adminDatos.getPacientes().get(this.nombre).estoyDisponible(dataSplit[1], hora)) ? "Paciente libre" : "Agenda del paciente ocupada") + "\n"
-                        + ((this.adminDatos.getMedicos().get(dataSplit[0]).estoyDisponible(dataSplit[1], hora)) ? "Médico libre" : "Agenda del médico ocupada");
+                        + ((this.adminDatos.getMedicos().get(dataSplit[0]).estoyDisponible(dataSplit[1], hora)) ? "Medico libre" : "Agenda del medico ocupada");
             }
         }
         return "Cita registrada";
