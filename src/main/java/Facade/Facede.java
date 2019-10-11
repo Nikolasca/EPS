@@ -74,7 +74,7 @@ public class Facede {
       return this.eps1.mostrar(codigo);
     }
      public String verContraros(){
-      return this.eps1.mostrarDatos()+"asdasd";
+      return this.eps1.mostrarDatos()+this.eps1.getContratos().size();
     }
     
     public ArrayList<Medico> Traer(String Fecha, String hora){
