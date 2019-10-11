@@ -85,7 +85,6 @@ public class Paciente extends HttpServlet {
         } else if (url.equalsIgnoreCase("/vercontrato")) {
 
             ServletOutputStream out = resp.getOutputStream();
-            out.write("Cita Agregada".getBytes());
             out.write(facade.verContraros().getBytes());
             out.flush();
             out.close();
