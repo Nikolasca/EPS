@@ -42,7 +42,7 @@ public class Paciente extends HttpServlet {
             String hora = req.getParameter("hora");
             String reserva = req.getParameter("reserva");
             String paciente = req.getParameter("paciente");
-            facade.AgregarCita(reserva, fecha, hora, reserva);
+            facade.AgregarCita(reserva, fecha, hora, paciente);
         }
 
     }
