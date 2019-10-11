@@ -12,8 +12,8 @@ import java.util.HashMap;
 public class Paciente extends Usuario{
     private HashMap<String, HashMap<LocalTime, String>> horario;
     
-    public Paciente(String login, String password){
-    super(login, password);
+    public Paciente(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono){
+    super(login, password, Cedula, Nombres, Fecha, Direccion, Telefono);
      this.horario = new HashMap<>();
      super.setTipouser("Paciente");
    

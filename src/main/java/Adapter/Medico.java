@@ -13,8 +13,8 @@ public class Medico extends Usuario {
 
     private HashMap<String, HashMap<LocalTime, String>> horario;
 
-    public Medico(String login, String password) {
-        super(login, password);
+    public Medico(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
+        super(login, password, Cedula, Nombres, Fecha, Direccion, Telefono);
         this.horario = new LinkedHashMap<>();
         super.setTipouser("Medico");
     }
