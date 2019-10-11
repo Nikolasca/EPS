@@ -22,7 +22,7 @@ import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Paciente",
-        urlPatterns = {"/verDisponibilidad", "/reservar", "/paciente", "/contrato", "/vercontrato"}
+        urlPatterns = {"/verDisponibilidad", "/reservar", "/paciente", "/contrato", "/vercontrato","/contratocodigo"}
 )
 
 public class Paciente extends HttpServlet {
@@ -90,6 +90,15 @@ public class Paciente extends HttpServlet {
             out.flush();
             out.close();
 
+        }
+        else if(url.equalsIgnoreCase("/contratocodigo")){
+            String codigo = req.getParameter("id");
+            facade.verContratos(codigo);
+            ServletOutputStream out = resp.getOutputStream();
+            out.write(facade.verContrarosCodigo(codigo).getBytes());
+            out.flush();
+            out.close();
+        
         }
 
     }
