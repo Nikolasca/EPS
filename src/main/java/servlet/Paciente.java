@@ -33,11 +33,13 @@ public class Paciente extends HttpServlet {
         if (url.equalsIgnoreCase("/verDisponibilidad")) {
             String fecha = req.getParameter("fecha");
             String hora = req.getParameter("hora");
+            String paciente = req.getParameter("paciente");
             ArrayList<Medico> lista = facade.Traer(fecha, hora);
             req.setAttribute("lista", lista);
             req.setAttribute("fecha", fecha);
             req.setAttribute("hora", hora);
-            rd = req.getRequestDispatcher("/PedirCita.jsp");
+            req.setAttribute("paciente", paciente);
+            rd = req.getRequestDispatcher("/PedirCita2.jsp");
             rd.forward(req, resp);
         }else if(url.equalsIgnoreCase("/reservar")){
             String fecha = req.getParameter("fecha");
@@ -46,7 +48,20 @@ public class Paciente extends HttpServlet {
             String paciente = req.getParameter("paciente");
             facade.AgregarCita(reserva, fecha, hora, paciente);
         }
+        else if(url.equalsIgnoreCase("/paciente")){
+            String paciente = req.getParameter("paciente");
+            req.setAttribute("paciente", paciente);
+            rd = req.getRequestDispatcher("/PedirCita.jsp");
+            rd.forward(req, resp);
+            
+            
+        
+        
+        }
+        
+        }
+        
 
-    }
+    
 
 }
