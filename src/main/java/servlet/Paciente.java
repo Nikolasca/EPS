@@ -18,7 +18,7 @@ import javax.servlet.RequestDispatcher;
 
 @WebServlet(
         name = "Paciente",
-        urlPatterns = {"/verDisponibilidad","/reservar"}
+        urlPatterns = {"/verDisponibilidad","/reservar","/paciente"}
 )
 
 public class Paciente extends HttpServlet {
