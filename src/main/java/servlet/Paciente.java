@@ -18,7 +18,7 @@ import javax.servlet.RequestDispatcher;
 
 @WebServlet(
         name = "Paciente",
-        urlPatterns = {"/verDisponibilidad"}
+        urlPatterns = {"/verDisponibilidad","/reservar"}
 )
 
 public class Paciente extends HttpServlet {
@@ -37,6 +37,11 @@ public class Paciente extends HttpServlet {
             req.setAttribute("lista", lista);
             rd = req.getRequestDispatcher("/PedirCita2.jsp");
             rd.forward(req, resp);
+        }else if(url.equalsIgnoreCase("/reservar")){
+            String fecha = req.getParameter("fecha");
+            String hora = req.getParameter("hora");
+            String reserva = req.getParameter("reserva");
+            facade.AgregarCita(reserva, fecha, hora, reserva);
         }
 
     }

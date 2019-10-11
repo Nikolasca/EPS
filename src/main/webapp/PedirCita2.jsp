@@ -73,7 +73,10 @@
                                             <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
                                         <br>
-                                        <input type="submit" class="btn btn-success" value="Pedir Cita" />
+                                        <form action="reservar" method="post"
+                                              <input type="hidden" name="reserva" value="${medico}">
+                                        
+                                        </form>
                                     </c:forEach>
                                     
                                 </div>

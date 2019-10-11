@@ -88,12 +88,12 @@ public class Facede {
         }
        return disponibles;
     }
-    public String AgregarCita(Medico medi, String Fecha, LocalTime  hora, String Paciente ){
+    public String AgregarCita(String medi, String Fecha, String  hora, String Paciente ){
         
-        
-        medi.addCita(Fecha, hora, Paciente);
-        this.usuarios.replace(medi.getLogin(), medi);
-        return "Cita Agregada";
+        Medico med = (Medico) this.usuarios.get(medi);
+        String e = med.addCita(Fecha, LocalTime.parse(hora), Paciente);
+        this.usuarios.replace(med.getLogin(), med);
+        return e;
     }
     
     public String AgregarAgenda(Medico medi, String fecha, String horaInicioM, String  horaFinM, String horaInicioT, String horaFinT){
