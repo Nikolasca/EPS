@@ -42,7 +42,7 @@ public class Login extends HttpServlet {
                 rd.forward(req, resp);
 
             } else if (usuario.getTipouser().equals("Paciente")) {
-                req.setAttribute("usuario", "Perra");
+                req.setAttribute("usuario", usuario.getLogin());
                 rd = req.getRequestDispatcher("/HomePaciente.jsp");
                 rd.forward(req, resp);
             }
