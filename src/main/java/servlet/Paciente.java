@@ -43,10 +43,10 @@ public class Paciente extends HttpServlet {
             rd.forward(req, resp);
         }else if(url.equalsIgnoreCase("/reservar")){
             String fecha = req.getParameter("fecha");
-            String hora = req.getParameter("hora");
+            String hora = req.getParameter("hora").toString();
             String reserva = req.getParameter("reserva");
             String paciente = req.getParameter("paciente");
-            facade.AgregarCita(reserva, fecha, "07:00", paciente);
+            facade.AgregarCita(reserva, fecha, hora, paciente);
         }
         else if(url.equalsIgnoreCase("/paciente")){
             String paciente = req.getParameter("paciente");
