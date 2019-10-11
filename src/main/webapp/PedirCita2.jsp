@@ -65,14 +65,17 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 text-center" >
-                                    <h1 class="mt-5">sopotamadre</h1>
+                                    <h1 class="mt-5">Medicos</h1>
                                 </div>
                                 <div class="col-lg-12 text-center">
                                     <c:forEach items="${lista}" var="medico" varStatus="status">
                                         <div id="formUsuario">
                                             <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
+                                        <br>
+                                        <input type="submit" class="btn btn-success" value="Pedir Cita" />
                                     </c:forEach>
+                                    
                                 </div>
                             </div>
                         </div>
