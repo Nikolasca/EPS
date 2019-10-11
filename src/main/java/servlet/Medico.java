@@ -42,7 +42,7 @@ public class Medico extends HttpServlet {
         else if(url.equalsIgnoreCase("/medico")){
             String medico = req.getParameter("medico");
              req.setAttribute("medico", medico);
-                rd = req.getRequestDispatcher("/Disponiblidad.html");
+                rd = req.getRequestDispatcher("/Disponiblidad.jsp");
                 rd.forward(req, resp);
         
         }
