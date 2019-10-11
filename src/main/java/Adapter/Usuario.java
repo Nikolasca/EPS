@@ -7,7 +7,7 @@ package Adapter;
 
 public abstract class Usuario {
 
-    private String Login;
+    private String login;
     private String password;
     private String Cedula;
     private String Nombres;
@@ -64,11 +64,11 @@ public abstract class Usuario {
     }
     
     public String getLogin() {
-        return Login;
+        return login;
     }
 
     public void setLogin(String login) {
-        this.Login = login;
+        this.login = login;
     }
 
     public String getPassword() {
@@ -88,7 +88,7 @@ public abstract class Usuario {
     }
 
     public Usuario(String login, String password, String Cedula, String Nombres, String Fecha, String Direccion, String Telefono) {
-        this.Login = login;
+        this.login = login;
         this.password = password;
         this.Cedula = Cedula;
         this.Nombres = Nombres;

@@ -6,6 +6,8 @@
 package launch;
 
 import Adapter.Medico;
+import Adapter.Paciente;
+import Adapter.Usuario;
 import Facade.Facede;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -24,7 +26,9 @@ public class NewMain {
         Facede fac = Facede.rConstructora();
         Medico med = (Medico) fac.getUsuarios().get("nikolas");
         ArrayList<Medico> medi=fac.Traer("12/10/2019", "07:00");
+        Usuario pa = new Paciente ("nikolasp", "123","34567","Nikolas","21","armenia","23456789");
         System.out.println(medi.size());
+        System.out.println(med.addCita("12/10/2019",LocalTime.parse("07:00"), pa.getLogin()));
     }
     
 }
