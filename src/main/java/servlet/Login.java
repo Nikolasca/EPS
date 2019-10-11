@@ -34,7 +34,7 @@ public class Login extends HttpServlet {
         if (usuario != null) {
             if (usuario.getTipouser().equals("Administrador")) {
                 req.setAttribute("usuario", user);
-                rd = req.getRequestDispatcher("/newhtml1.html");
+                rd = req.getRequestDispatcher("/HomeAdmin.html");
                 rd.forward(req, resp);
             } else if (usuario.getTipouser().equals("Medico")) {
                 req.setAttribute("usuario", user);
