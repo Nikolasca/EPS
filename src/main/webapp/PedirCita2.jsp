@@ -64,13 +64,13 @@
                     <div class="list-group">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12 text-center" style="color: whitesmoke;">
-                                    <h1 class="mt-5">Catalogo</h1>
+                                <div class="col-lg-12 text-center" >
+                                    <h1 class="mt-5">sptmd</h1>
                                 </div>
-                                <div class="col-lg-12 text-center" style="color: whitesmoke;">
+                                <div class="col-lg-12 text-center">
                                     <c:forEach items="${lista}" var="medico" varStatus="status">
                                         <div id="formUsuario">
-                                            <p><c:out value="${medico.nombre}"/></p>  
+                                            <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
                                     </c:forEach>
                                 </div>
