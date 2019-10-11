@@ -78,6 +78,8 @@
                                         <form action="reservar" method="get"
                                               <input type="hidden" name="reserva" value="${medico}">
                                             <input type="hidden" name="paciente" value="${paciente}">
+                                            <input type="hidden" name="fecha" value="${fecha}">
+                                            <input type="hidden" name="hora" value="${hora}">
                                             <button type="submit">Agendar</button>
                                         
                                         </form>
