@@ -39,11 +39,12 @@ public class Facede {
         this.addPaciente("nikolasp", "123","34567","Nikolas","21","armenia","23456789");
         this.addAdministrador("nikolasa", "123","34567","Nikolas","21","armenia","23456789");
         Medico med = (Medico) this.usuarios.get("nikolas");
-        this.AgregarAgenda(med, "12/10/2019","06:00", "09:00", "06:00", "09:00");
+        System.out.println(this.AgregarAgenda(med, "12/10/2019","06:00", "09:00", "06:00", "09:00"));
         
     }
     public Usuario addMedico(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
         Usuario u = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
+        keyMedicos.add(login);
         return u;
     }
 
@@ -96,9 +97,11 @@ public class Facede {
     }
     
     public String AgregarAgenda(Medico medi, String fecha, String horaInicioM, String  horaFinM, String horaInicioT, String horaFinT){
-        medi.addDisponibilidad(fecha, LocalTime.parse(horaInicioM), LocalTime.parse(horaFinM),LocalTime.parse(horaInicioT), LocalTime.parse(horaFinT));
-        this.usuarios.replace(medi.getLogin(), medi);
-        return "Disponibilidad Añadida";
+        if(medi.addDisponibilidad(fecha, LocalTime.parse(horaInicioM), LocalTime.parse(horaFinM),LocalTime.parse(horaInicioT), LocalTime.parse(horaFinT))){
+            this.usuarios.replace(medi.getLogin(), medi);
+            return "Disponibilidad Añadida";
+        }
+        return "Error Aniadiendo la tilapia negra";
     }
             
             
