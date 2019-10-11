@@ -3,6 +3,7 @@ package servlet;
 import Adapter.Medico;
 import Adapter.Usuario;
 import Composite.Beneficiario;
+import Composite.Componente;
 import Composite.Contrato;
 import Facade.AdminCitas;
 import Facade.Facede;
@@ -75,6 +76,7 @@ public class Paciente extends HttpServlet {
             contrato.setCodigocon(id);
             Usuario user = facade.getUsuarios().get(login);
             contrato.getBeneficiarios().add(bene);
+            facade.Addcontrato((Componente) bene);
             ServletOutputStream out = resp.getOutputStream();
             out.write("Cita Agregada".getBytes());
             out.write(login.getBytes());
