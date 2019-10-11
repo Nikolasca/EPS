@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Paciente",
@@ -47,6 +48,13 @@ public class Paciente extends HttpServlet {
             String reserva = req.getParameter("reserva");
             String paciente = req.getParameter("paciente");
             facade.AgregarCita(reserva, fecha, hora, paciente);
+             ServletOutputStream out = resp.getOutputStream();
+        out.write("Cita Agregada".getBytes());
+                out.write(paciente.getBytes());
+                out.write(reserva.getBytes());
+        out.flush();
+        out.close();
+            
         }
         else if(url.equalsIgnoreCase("/paciente")){
             String paciente = req.getParameter("paciente");

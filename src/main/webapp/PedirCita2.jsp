@@ -77,10 +77,10 @@
                                         <br>
                                         <div>
                                             <form action="reservar" method="GET">
-                                                <input type="" name="paciente" value="${paciente}">
-                                                <input type="" name="reserva" value="${medico.login}">
-                                                <input type="" name="fecha" value="${fecha}">
-                                                <input type="" name="horas" value="${hora}">
+                                                <input type="hidden" name="paciente" value="${paciente}">
+                                                <input type="hidden" name="reserva" value="${medico.login}">
+                                                <input type="hidden" name="fecha" value="${fecha}">
+                                                <input type="hidden" name="horas" value="${hora}">
                                                 <button type="submit">Agendar</button>
                                             </form>
                                         </div>
