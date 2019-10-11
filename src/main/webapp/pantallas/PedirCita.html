@@ -45,11 +45,13 @@
                     Registro Medico:
                 </h1>
                 <div id="formUsuario">
-                    <h3>Ingrese la fecha para ver disponibilidad</h3>
-                    <form action="Registroe" method="post">
-                        <input type="text" class="campos" name="user" placeholder="Fecha" required="required"
+                    <h3>Ingrese la fecha y hora para ver disponibilidad</h3>
+                    <form action="verDisponibilidad" method="GET">
+                        <input type="text" class="campos" name="fecha" placeholder="Fecha" required="required"
                             maxlength="7" />
                         <br>
+                        <input type="text" class="campos" name="hora" placeholder="Hora" required="required"
+                            maxlength="7" />
                         <br></br><input type="submit" class="btn btn-success" value="Buscar" />
                     </form>
                 </div>

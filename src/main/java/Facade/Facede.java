@@ -73,11 +73,12 @@ public class Facede {
       return this.eps1.mostrarDatos();
     }
     
-    public ArrayList<Medico> Traer(String Fecha, LocalTime hora){
+    public ArrayList<Medico> Traer(String Fecha, String hora){
         ArrayList<Medico> disponibles = new ArrayList<>();
         for (String keyMedico : keyMedicos) {
             Medico med = (Medico) this.usuarios.get(keyMedico);
-            if(med.estoyDisponible(Fecha, hora)){
+            
+            if(med.estoyDisponible(Fecha, LocalTime.parse(hora))){
                 disponibles.add(med);
             }
         }
