@@ -75,7 +75,7 @@
                                             <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
                                         <br>
-                                        <form action="reservar" method="post"
+                                        <form action="reservar" method="get"
                                               <input type="hidden" name="reserva" value="${medico}">
                                             <input type="hidden" name="paciente" value="${paciente}">
                                             <button type="submit">Agendar</button>
