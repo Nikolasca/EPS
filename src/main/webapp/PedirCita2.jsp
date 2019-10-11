@@ -76,7 +76,7 @@
                                         </div>
                                         <br>
                                         <form action="reservar" method="get"
-                                              <input type="" name="reserva" value="${medico}">
+                                              <input type="" name="reserva" value="${medico.login}">
                                             <input type="" name="paciente" value="${paciente}">
                                             <input type="" name="fecha" value="${fecha}">
                                             <input type="" name="hora " value="${hora}">
