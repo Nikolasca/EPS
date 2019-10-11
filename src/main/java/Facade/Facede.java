@@ -38,6 +38,9 @@ public class Facede {
         this.addMedico("nikolas", "123","34567","Nikolas","21","armenia","23456789");
         this.addPaciente("nikolasp", "123","34567","Nikolas","21","armenia","23456789");
         this.addAdministrador("nikolasa", "123","34567","Nikolas","21","armenia","23456789");
+        Medico med = (Medico) this.usuarios.get("nikolas");
+        this.AgregarAgenda(med, "12/10/2019","06:00 a. m.", "09:00 a. m.", "06:00 a. m.", "09:00 a. m.");
+        
     }
     public Usuario addMedico(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
         Usuario u = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));
