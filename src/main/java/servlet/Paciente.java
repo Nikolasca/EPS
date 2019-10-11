@@ -46,7 +46,7 @@ public class Paciente extends HttpServlet {
             String hora = req.getParameter("hora");
             String reserva = req.getParameter("reserva");
             String paciente = req.getParameter("paciente");
-            facade.AgregarCita(reserva, "12/10/2019", "07:00", paciente);
+            facade.AgregarCita(reserva, fecha, "07:00", paciente);
         }
         else if(url.equalsIgnoreCase("/paciente")){
             String paciente = req.getParameter("paciente");
