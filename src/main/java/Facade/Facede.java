@@ -36,8 +36,8 @@ public class Facede {
         this.eps1 = new EPS();
         this.keyMedicos = new ArrayList<>();
         this.addMedico("nikolas", "123","34567","Nikolas","21","armenia","23456789");
-        this.addPaciente("nikolas", "123","34567","Nikolas","21","armenia","23456789");
-        this.addAdministrador("nikolas", "123","34567","Nikolas","21","armenia","23456789");
+        this.addPaciente("nikolasp", "123","34567","Nikolas","21","armenia","23456789");
+        this.addAdministrador("nikolasa", "123","34567","Nikolas","21","armenia","23456789");
     }
     public Usuario addMedico(String login,String password,String Cedula,String Nombres,String Fecha,String Direccion, String Telefono) {
         Usuario u = usuarios.put(login, new Medico(login, password, Cedula, Nombres, Fecha, Direccion, Telefono));

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>login</title>
+    <title>Registro Medico</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Css/background.css">
@@ -30,12 +30,12 @@
                             <a href="RegistroPaciente.html">Registro Paciente</a>
                         </li>
                         <li role="separator" class="divider"></li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a href="RegistroMedico.html">Registro Medico</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a href="login.html">Login</a>
                 </li>
             </ul>
@@ -45,17 +45,33 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 style="color: black;">
-                    Login:
+                    Registro Medico:
                 </h1>
                 <div id="formUsuario">
-                    <h3>Ingresa</h3>
-                    <form action="Registroe" method="post">
+                    <h3>Ingrese sus datos</h3>
+                    <form action="registerM" method="GET">
                         <input type="text" class="campos" name="user" placeholder="Usuario" required="required"
                             maxlength="20" />
                         <br>
                         <input type="password" class="campos" name="pass" placeholder="Contraseña" required="required"
                             maxlength="20" />
                         <br>
+                        <input type="text" class="campos" name="cedula" placeholder="Documento de identidad"
+                            required="required" maxlength="15" />
+                        <br>
+                        <input type="text" class="campos" name="nombres" placeholder="Nombres" required="required"
+                            maxlength="20" />
+                        <br>
+                        <input type="date" class="campos" name="fecha" placeholder="Fecha de nacimiento"
+                            required="required" maxlength="10" />
+                        <br>
+                        <input type="text" class="campos" name="direccion" placeholder="Direccion" required="required"
+                            maxlength="15" />
+                        <br>
+                        <input type="text" class="campos" name="telefono" placeholder="Telefono" required="required"
+                            maxlength="15" />
+                        <br>
+
 
                         <br></br><input type="submit" class="btn btn-success" value="Registrar" />
                     </form>
