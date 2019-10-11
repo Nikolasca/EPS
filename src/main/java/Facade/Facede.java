@@ -103,7 +103,7 @@ public class Facede {
             this.usuarios.replace(medi.getLogin(), medi);
             return "Disponibilidad Añadida";
         }
-        return "Error Aniadiendo la tilapia negra";
+        return "Error añadiendo cita";
     }
 
     public HashMap<String, Usuario> getUsuarios() {

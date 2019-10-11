@@ -61,16 +61,14 @@
                     <form action="agendar" method="GET">
                         <input type="text" class="campos" name="fecha" placeholder="DD:MM:AA" required="required"
                             maxlength="20" />
-                        <input type="text" class="campos" name="franja1" placeholder="Franja 1" required="required"
-                            maxlength="20" />
+                        <a>Franja1</a>
                         <br>
                         <input type="text" class="campos" name="horaI" placeholder="HH:MM" required="required"
                             maxlength="20" />
                         <input type="text" class="campos" name="horaF" placeholder="HH:MM" required="required"
                             maxlength="20" />
                         <br>
-                        <input type="text" class="campos" name="franja2" placeholder="Franja 2" required="required"
-                            maxlength="20" />
+                        <a>Franja1</a>
                         <br>
                         <input type="text" class="campos" name="horaI2" placeholder="HH:MM" required="required"
                             maxlength="20" />
