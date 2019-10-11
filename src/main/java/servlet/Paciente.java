@@ -70,13 +70,12 @@ public class Paciente extends HttpServlet {
             String documento = req.getParameter("documento");
             String fecha = req.getParameter("fecha");
             String genero = req.getParameter("genero");
-            Beneficiario bene = new Beneficiario(login, documento, fecha, genero);
-
+            Beneficiario bene = new Beneficiario(login,documento,fecha,genero);
             Contrato contrato = new Contrato();
             contrato.setCodigocon(id);
             Usuario user = facade.getUsuarios().get(login);
             contrato.getBeneficiarios().add(bene);
-            facade.Addcontrato((Componente) bene);
+            facade.Addcontrato(contrato);
             ServletOutputStream out = resp.getOutputStream();
             out.write("Cita Agregada".getBytes());
             out.write(login.getBytes());
