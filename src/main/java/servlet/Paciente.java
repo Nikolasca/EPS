@@ -31,7 +31,7 @@ public class Paciente extends HttpServlet {
             throws ServletException, IOException {
         String url = req.getServletPath();
         if (url.equalsIgnoreCase("/verDisponibilidad")) {
-            String fecha = req.getParameter("Fecha");
+            String fecha = req.getParameter("fecha");
             String hora = req.getParameter("hora");
             ArrayList<Medico> lista = facade.Traer(fecha, hora);
             req.setAttribute("medico", lista.get(0));
