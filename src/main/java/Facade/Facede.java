@@ -38,7 +38,7 @@ public class Facede {
         this.addPaciente("nikolasp", "123", "34567", "Nikolas", "21", "armenia", "23456789");
         this.addAdministrador("nikolasa", "123", "34567", "Nikolas", "21", "armenia", "23456789");
         Medico med = (Medico) this.usuarios.get("nikolas");
-        this.AgregarAgenda(med, "12/10/2019", "06:00", "09:00", "06:00", "09:00");
+        this.AgregarAgenda(med.getLogin(), "12/10/2019", "06:00", "09:00", "06:00", "09:00");
 
     }
 
