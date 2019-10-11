@@ -30,7 +30,7 @@
                     <ul class="dropdown-menu">
                         <li class="nav-item">
                             
-                            <a href="Reservar?paciente=${usuario.login}">Pedir cita</a>
+                            <a href="reservar?paciente=${usuario.login}">Pedir cita</a>
                         </li>
                         <li role="separator" class="divider"></li>
                         <li class="nav-item">
