@@ -21,7 +21,7 @@ import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Paciente",
-        urlPatterns = {"/verDisponibilidad","/reservar","/paciente","/contrato"}
+        urlPatterns = {"/verDisponibilidad", "/reservar", "/paciente", "/contrato", "/vercontrato"}
 )
 
 public class Paciente extends HttpServlet {
@@ -44,55 +44,54 @@ public class Paciente extends HttpServlet {
             req.setAttribute("paciente", paciente);
             rd = req.getRequestDispatcher("/PedirCita2.jsp");
             rd.forward(req, resp);
-        }else if(url.equalsIgnoreCase("/reservar")){
+        } else if (url.equalsIgnoreCase("/reservar")) {
             String fecha = req.getParameter("fecha");
             String hora = req.getParameter("horas");
             String reserva = req.getParameter("reserva");
             String paciente = req.getParameter("paciente");
             facade.AgregarCita(reserva, fecha, hora, paciente);
-             ServletOutputStream out = resp.getOutputStream();
-        out.write("Cita Agregada".getBytes());
-                out.write(paciente.getBytes());
-                out.write(reserva.getBytes());
-        out.flush();
-        out.close();
-            
-        }
-        else if(url.equalsIgnoreCase("/paciente")){
+            ServletOutputStream out = resp.getOutputStream();
+            out.write("Cita Agregada".getBytes());
+            out.write(paciente.getBytes());
+            out.write(reserva.getBytes());
+            out.flush();
+            out.close();
+
+        } else if (url.equalsIgnoreCase("/paciente")) {
             String paciente = req.getParameter("paciente");
             req.setAttribute("paciente", paciente);
             rd = req.getRequestDispatcher("/PedirCita.jsp");
             rd.forward(req, resp);
-           
-        
-        }
-        else if(url.equalsIgnoreCase("/contrato")){
+
+        } else if (url.equalsIgnoreCase("/contrato")) {
             String id = req.getParameter("id");
             String login = req.getParameter("login");
             String documento = req.getParameter("documento");
             String fecha = req.getParameter("fecha");
             String genero = req.getParameter("genero");
-            Beneficiario bene = new Beneficiario(login,documento,fecha,genero);
-            
-            
+            Beneficiario bene = new Beneficiario(login, documento, fecha, genero);
+
             Contrato contrato = new Contrato();
             contrato.setCodigocon(id);
-           Usuario user = facade.getUsuarios().get(login);
+            Usuario user = facade.getUsuarios().get(login);
             contrato.getBeneficiarios().add(bene);
-            
             ServletOutputStream out = resp.getOutputStream();
-        out.write("Cita Agregada".getBytes());
-                out.write(login.getBytes());
-                out.write(id.getBytes());
-        out.flush();
-        out.close();
-            
-        
-        }
-        
-        }
-        
+            out.write("Cita Agregada".getBytes());
+            out.write(login.getBytes());
+            out.write(id.getBytes());
+            out.flush();
+            out.close();
 
-    
+        } else if (url.equalsIgnoreCase("/vercontrato")) {
+
+            ServletOutputStream out = resp.getOutputStream();
+            out.write("Cita Agregada".getBytes());
+            out.write(facade.verContraros().getBytes());
+            out.flush();
+            out.close();
+
+        }
+
+    }
 
 }
