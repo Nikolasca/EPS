@@ -76,12 +76,11 @@
                                         </div>
                                         <br>
                                         <form action="reservar" method="get"
-                                              <input type="hidden" name="reserva" value="${medico}">
-                                            <input type="hidden" name="paciente" value="${paciente}">
+                                              <input type="" name="reserva" value="${medico}">
+                                            <input type="" name="paciente" value="${paciente}">
                                             <input type="" name="fecha" value="${fecha}">
                                             <input type="" name="hora " value="${hora}">
                                             <button type="submit">Agendar</button>
-                                        
                                         </form>
                                     </c:forEach>
                                     
