@@ -2,6 +2,8 @@ package servlet;
 
 import Adapter.Medico;
 import Adapter.Usuario;
+import Composite.Beneficiario;
+import Composite.Contrato;
 import Facade.AdminCitas;
 import Facade.Facede;
 import java.io.IOException;
@@ -19,7 +21,7 @@ import javax.servlet.ServletOutputStream;
 
 @WebServlet(
         name = "Paciente",
-        urlPatterns = {"/verDisponibilidad","/reservar","/paciente"}
+        urlPatterns = {"/verDisponibilidad","/reservar","/paciente","/contrato"}
 )
 
 public class Paciente extends HttpServlet {
@@ -61,9 +63,23 @@ public class Paciente extends HttpServlet {
             req.setAttribute("paciente", paciente);
             rd = req.getRequestDispatcher("/PedirCita.jsp");
             rd.forward(req, resp);
-            
-            
+           
         
+        }
+        else if(url.equalsIgnoreCase("/contrato")){
+            String id = req.getParameter("id");
+            String login = req.getParameter("login");
+            String documento = req.getParameter("documento");
+            String fecha = req.getParameter("fecha");
+            String genero = req.getParameter("genero");
+            Beneficiario bene = new Beneficiario(login,documento,fecha,genero);
+            
+            
+            Contrato contrato = new Contrato();
+            contrato.setCodigocon(id);
+           Usuario user = facade.getUsuarios().get(login);
+            contrato.getBeneficiarios().add(bene);
+            
         
         }
         
