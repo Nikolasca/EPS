@@ -23,7 +23,6 @@ import javax.servlet.RequestDispatcher;
 
 public class Paciente extends HttpServlet {
 
-    //private AdminCitas admin =  AdminCitas.rConstructora();
     RequestDispatcher rd;
     Facede facade = Facede.rConstructora();
 

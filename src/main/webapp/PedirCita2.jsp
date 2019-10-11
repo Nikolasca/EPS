@@ -65,11 +65,12 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 text-center" >
-                                    <h1 class="mt-5">sptmd</h1>
+                                    <h1 class="mt-5">sopotamadre</h1>
                                 </div>
                                 <div class="col-lg-12 text-center">
                                     <c:forEach items="${lista}" var="medico" varStatus="status">
                                         <div id="formUsuario">
+                                            <p>ramirez</p>
                                             <p><c:out value="${medico.nombres}"/></p>  
                                         </div>
                                     </c:forEach>
